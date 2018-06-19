@@ -1,5 +1,19 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.pikachu = [];
+  window.gengar = [];
+  window.charizard = [];
+  window.count = 0;
+  
+  $('.lineUpButton').on('click', function(event) {
+    debugger;
+    window.dancers.forEach(elem => {
+      $(elem.$node[0]).stop();
+      elem.lineUp();
+      window.count += 25;
+    });    
+  });
+
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -28,6 +42,8 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
+    
   });
 });
 

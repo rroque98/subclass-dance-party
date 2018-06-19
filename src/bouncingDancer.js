@@ -1,6 +1,8 @@
 var BouncingDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $("<img id=seventyfive src=http://www.wright-house.com/dance/Ballroom-Dancers-Couple-600x475.jpg>");
+  this.$node = $('<img class="gengar w3-spin" src=http://i0.kym-cdn.com/photos/images/original/000/609/431/335.gif>');
+  this.setPosition(top - 200, left);
+  
 };
 
 BouncingDancer.prototype = Object.create(Dancer.prototype);
