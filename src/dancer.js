@@ -32,7 +32,7 @@
 // };
 
 var Dancer = function(top, left, timeBetweenSteps) {
-  this.$node = $('<span class ="dancer"></span>');
+  this.$node = $('<img src="http://www.wright-house.com/dance/Ballroom-Dancers-Couple-600x475.jpg" class ="dancer"></span>');
   this.step(timeBetweenSteps);
   this.setPosition(top, left);
 };
