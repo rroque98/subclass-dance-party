@@ -6,13 +6,18 @@ $(document).ready(function() {
   window.count = 0;
   
   $('.lineUpButton').on('click', function(event) {
-    debugger;
+    window.count = 0;
     window.dancers.forEach(elem => {
       $(elem.$node[0]).stop();
       elem.lineUp();
       window.count += 25;
     });    
   });
+  
+  // $('.dancer').on('click', function(event) {
+  //   console.log('helloooo');
+  //   $(this).addClass('w3-spin');
+  // });
 
 
   $('.addDancerButton').on('click', function(event) {

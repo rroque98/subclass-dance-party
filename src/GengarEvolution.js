@@ -1,14 +1,14 @@
-var BouncingDancer = function(top, left, timeBetweenSteps) {
+var GengarEvolution = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<img class="gengar w3-spin dancer" src=http://i0.kym-cdn.com/photos/images/original/000/609/431/335.gif>');
+  this.$node = $('<img class="gengar w3-animate-fading dancer" src=https://media.giphy.com/media/11LkxpJX5Eex7q/giphy.gif>');
   this.setPosition(top - 200, left);
   
 };
 
-BouncingDancer.prototype = Object.create(Dancer.prototype);
-BouncingDancer.prototype.constructor = BouncingDancer;
+GengarEvolution.prototype = Object.create(Dancer.prototype);
+GengarEvolution.prototype.constructor = GengarEvolution;
 
-BouncingDancer.prototype.step = function(timeBetweenSteps) {
+GengarEvolution.prototype.step = function(timeBetweenSteps) {
   Dancer.prototype.step.call(this, timeBetweenSteps);
   pulse(this.$node);
 };
